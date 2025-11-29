@@ -7,10 +7,12 @@
 
   <style>
     :root {
-      --bg: #07150d;      /* dark / racing green */
+      --bg-dark: #07150d;      /* deep / racing green */
+      --bg-mid: #0f2417;
       --card: #ffffff;
-      --accent: #d4af37;  /* gold */
-      --text: #111111;
+      --accent: #d4af37;      /* gold */
+      --text: #101010;
+      --muted: #666666;
     }
 
     * {
@@ -21,120 +23,82 @@
 
     body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: radial-gradient(circle at top, #173726, var(--bg));
+      background: #f4f4f4;
       color: var(--text);
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-    }
-
-    .card {
-      background: var(--card);
-      max-width: 520px;
-      width: 100%;
-      border-radius: 18px;
-      padding: 24px 22px 20px;
-      box-shadow: 0 14px 35px rgba(0, 0, 0, 0.35);
-      border: 1px solid rgba(212, 175, 55, 0.4);
-      text-align: left;
-    }
-
-    .logo-wrap {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 10px;
-    }
-
-    .logo-wrap img {
-      height: 48px;
-      width: auto;
-      display: block;
-    }
-
-    .name {
-      font-size: 0.8rem;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: #555;
-    }
-
-    h1 {
-      font-size: 1.4rem;
-      margin-bottom: 12px;
-    }
-
-    .accent-bar {
-      width: 52px;
-      height: 3px;
-      background: var(--accent);
-      border-radius: 999px;
-      margin-bottom: 14px;
-    }
-
-    p {
-      font-size: 0.95rem;
-      line-height: 1.6;
-      margin-bottom: 12px;
-    }
-
-    .label {
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: #666;
-      margin-top: 10px;
-      margin-bottom: 3px;
     }
 
     a {
       color: #004f3b;
       text-decoration: none;
-      font-weight: 500;
     }
-
     a:hover {
       text-decoration: underline;
     }
 
-    .footnote {
-      margin-top: 10px;
-      font-size: 0.78rem;
-      color: #777;
+    /* Header / Nav */
+
+    header {
+      background: var(--bg-dark);
+      color: #ffffff;
+      padding: 14px 20px;
     }
-  </style>
-</head>
-<body>
 
-  <div class="card">
-    <div class="logo-wrap">
-      <!-- Replace "logo.png" with the actual filename of your logo uploaded to the repo -->
-      <img src="logo.png" alt="Richmond Advisory Group logo" />
-      <div class="name">RICHMOND ADVISORY GROUP</div>
-    </div>
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
 
-    <h1>Independent Defence Consultancy</h1>
-    <div class="accent-bar"></div>
+    .logo-wrap {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
 
-    <p>
-      Richmond Advisory Group is a small, independent defence consultancy.
-      We provide discreet analysis and advisory support to selected clients
-      in the defence and security sector, informed by recent operational experience.
-    </p>
+    .logo-wrap img {
+      height: 40px;
+      width: auto;
+      display: block;
+    }
 
-    <div class="label">Contact</div>
-    <p>
-      <a href="mailto:info@richmondadvisorygroup.co.uk">
-        info@richmondadvisorygroup.co.uk
-      </a>
-    </p>
+    .wordmark {
+      font-size: 0.8rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      opacity: 0.9;
+    }
 
-    <div class="footnote">
-      UK-based · Available for work with government, industry and trusted partners.
-    </div>
-  </div>
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+    }
 
-</body>
-</html>
+    .nav-links a {
+      color: #ffffff;
+      opacity: 0.8;
+    }
+    .nav-links a:hover {
+      opacity: 1;
+      text-decoration: none;
+    }
+
+    /* Hero */
+
+    .hero {
+      background: radial-gradient(circle at top left, #234531, var(--bg-dark));
+      color: #ffffff;
+      padding: 70px 20px 60px;
+    }
+
+    .hero-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+      gap: 35px;
