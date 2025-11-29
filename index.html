@@ -1,43 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Richmond Advisory Group</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 600px;
-      margin: 60px auto;
-      padding: 0 20px;
-      line-height: 1.5;
+    :root {
+      --bg: #07150d;      /* dark / racing green */
+      --card: #ffffff;
+      --accent: #d4af37;  /* gold */
+      --text: #111111;
     }
-    h1 {
-      font-size: 28px;
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #173726, var(--bg));
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .card {
+      background: var(--card);
+      max-width: 520px;
+      width: 100%;
+      border-radius: 18px;
+      padding: 24px 22px 20px;
+      box-shadow: 0 14px 35px rgba(0, 0, 0, 0.35);
+      border: 1px solid rgba(212, 175, 55, 0.4);
+      text-align: left;
+    }
+
+    .logo-wrap {
+      display: flex;
+      align-items: center;
+      gap: 12px;
       margin-bottom: 10px;
     }
-    .small {
-      color: #555;
-      font-size: 15px;
-      margin-bottom: 20px;
+
+    .logo-wrap img {
+      height: 48px;
+      width: auto;
+      display: block;
     }
+
+    .name {
+      font-size: 0.8rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #555;
+    }
+
+    h1 {
+      font-size: 1.4rem;
+      margin-bottom: 12px;
+    }
+
+    .accent-bar {
+      width: 52px;
+      height: 3px;
+      background: var(--accent);
+      border-radius: 999px;
+      margin-bottom: 14px;
+    }
+
+    p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 12px;
+    }
+
+    .label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: #666;
+      margin-top: 10px;
+      margin-bottom: 3px;
+    }
+
     a {
-      color: #003c2f;
+      color: #004f3b;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .footnote {
+      margin-top: 10px;
+      font-size: 0.78rem;
+      color: #777;
     }
   </style>
 </head>
 <body>
 
-<h1>Richmond Advisory Group</h1>
+  <div class="card">
+    <div class="logo-wrap">
+      <!-- Replace "logo.png" with the actual filename of your logo uploaded to the repo -->
+      <img src="logo.png" alt="Richmond Advisory Group logo" />
+      <div class="name">RICHMOND ADVISORY GROUP</div>
+    </div>
 
-<p class="small">
-  A small independent defence consultancy providing analysis and advisory support.
-</p>
+    <h1>Independent Defence Consultancy</h1>
+    <div class="accent-bar"></div>
 
-<p>
-  <strong>Contact:</strong><br>
-  <a href="mailto:info@richmondadvisorygroup.co.uk">info@richmondadvisorygroup.co.uk</a>
-</p>
+    <p>
+      Richmond Advisory Group is a small, independent defence consultancy.
+      We provide discreet analysis and advisory support to selected clients
+      in the defence and security sector, informed by recent operational experience.
+    </p>
+
+    <div class="label">Contact</div>
+    <p>
+      <a href="mailto:info@richmondadvisorygroup.co.uk">
+        info@richmondadvisorygroup.co.uk
+      </a>
+    </p>
+
+    <div class="footnote">
+      UK-based · Available for work with government, industry and trusted partners.
+    </div>
+  </div>
 
 </body>
 </html>
