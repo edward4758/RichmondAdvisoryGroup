@@ -7,35 +7,23 @@
 
   <style>
     :root {
-      --bg-dark: #07150d;      /* deep / racing green */
+      --bg-dark: #07150d;      
       --bg-mid: #0f2417;
       --card: #ffffff;
-      --accent: #d4af37;      /* gold */
+      --accent: #d4af37;      
       --text: #101010;
       --muted: #666666;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family: system-ui, sans-serif;
       background: #f4f4f4;
       color: var(--text);
     }
 
-    a {
-      color: #004f3b;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-
-    /* Header / Nav */
+    a { color: #004f3b; text-decoration: none; }
+    a:hover { text-decoration: underline; }
 
     header {
       background: var(--bg-dark);
@@ -49,20 +37,10 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 16px;
     }
 
-    .logo-wrap {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .logo-wrap img {
-      height: 40px;
-      width: auto;
-      display: block;
-    }
+    .logo-wrap { display: flex; align-items: center; gap: 10px; }
+    .logo-wrap img { height: 40px; }
 
     .wordmark {
       font-size: 0.8rem;
@@ -71,24 +49,9 @@
       opacity: 0.9;
     }
 
-    .nav-links {
-      display: flex;
-      gap: 18px;
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-    }
-
-    .nav-links a {
-      color: #ffffff;
-      opacity: 0.8;
-    }
-    .nav-links a:hover {
-      opacity: 1;
-      text-decoration: none;
-    }
-
-    /* Hero */
+    .nav-links { display: flex; gap: 18px; font-size: 0.85rem; }
+    .nav-links a { color: #ffffff; opacity: 0.8; }
+    .nav-links a:hover { opacity: 1; text-decoration: none; }
 
     .hero {
       background: radial-gradient(circle at top left, #234531, var(--bg-dark));
@@ -113,92 +76,46 @@
       margin-bottom: 10px;
     }
 
-    .hero h1 {
-      font-size: clamp(1.9rem, 3vw, 2.4rem);
-      margin-bottom: 12px;
-    }
+    .hero h1 { font-size: clamp(1.9rem, 3vw, 2.4rem); margin-bottom: 12px; }
+    .accent-bar { width: 60px; height: 3px; background: var(--accent); border-radius: 999px; margin-bottom: 16px; }
 
-    .accent-bar {
-      width: 60px;
-      height: 3px;
-      background: var(--accent);
-      border-radius: 999px;
-      margin-bottom: 16px;
-    }
+    .hero p { max-width: 560px; line-height: 1.7; font-size: 0.98rem; opacity: 0.92; }
 
-    .hero p {
-      max-width: 560px;
-      line-height: 1.7;
-      font-size: 0.98rem;
-      opacity: 0.92;
-    }
-
-    .hero-cta {
-      margin-top: 22px;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 12px;
-    }
-
+    .hero-cta { margin-top: 22px; display: flex; align-items: center; gap: 12px; }
     .btn-primary {
-      display: inline-block;
       padding: 10px 22px;
       border-radius: 999px;
       background: var(--accent);
       color: #1a1a1a;
       font-size: 0.9rem;
       font-weight: 600;
-      text-decoration: none;
-    }
-    .btn-primary:hover {
-      opacity: 0.92;
-      text-decoration: none;
     }
 
-    .hero-note {
-      font-size: 0.8rem;
-      opacity: 0.85;
-    }
+    .hero-note { font-size: 0.8rem; opacity: 0.85; }
 
     .hero-card {
       background: rgba(5, 12, 8, 0.75);
       border-radius: 16px;
       border: 1px solid rgba(212, 175, 55, 0.45);
-      padding: 18px 18px 14px;
+      padding: 18px;
       font-size: 0.9rem;
-      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.5);
-      backdrop-filter: blur(6px);
+      box-shadow: 0 14px 30px rgba(0,0,0,0.5);
     }
 
     .hero-card-title {
       font-size: 0.78rem;
       text-transform: uppercase;
-      letter-spacing: 0.18em;
       color: var(--accent);
       margin-bottom: 6px;
     }
 
-    .hero-card p {
-      font-size: 0.88rem;
-      line-height: 1.6;
-      opacity: 0.9;
-    }
-
-    /* Main content */
-
-    main {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 40px 20px 60px;
-    }
-
+    main { max-width: 1100px; margin: 0 auto; padding: 40px 20px 60px; }
     section {
       margin-bottom: 40px;
       background: #ffffff;
       border-radius: 18px;
-      padding: 24px 22px 22px;
-      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.05);
+      padding: 24px;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.05);
     }
 
     section h2 {
@@ -208,77 +125,43 @@
       padding-bottom: 6px;
     }
 
-    .small {
-      font-size: 0.9rem;
-      color: var(--muted);
-    }
-
-    /* What we do */
+    .small { font-size: 0.9rem; color: var(--muted); }
 
     .what-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 18px;
-      margin-top: 6px;
     }
 
     .what-card {
       border-radius: 14px;
       border: 1px solid #e3e3e3;
-      padding: 14px 14px 12px;
+      padding: 14px;
     }
 
-    .what-card h3 {
-      font-size: 1rem;
-      margin-bottom: 6px;
-    }
-
-    .what-card p {
-      font-size: 0.9rem;
-      color: #555555;
-      line-height: 1.6;
-    }
-
-    /* Contact */
-
-    .contact-block {
-      text-align: left;
-    }
+    .what-card h3 { margin-bottom: 6px; }
 
     .contact-label {
       font-size: 0.8rem;
       text-transform: uppercase;
-      letter-spacing: 0.16em;
       color: var(--muted);
       margin-bottom: 4px;
     }
 
-    .contact-block p {
-      margin-bottom: 6px;
-      font-size: 0.95rem;
-    }
-
-    .footnote {
-      margin-top: 10px;
-      font-size: 0.82rem;
-      color: var(--muted);
-    }
+    .footnote { margin-top: 10px; font-size: 0.82rem; color: var(--muted); }
 
     footer {
       text-align: center;
       font-size: 0.78rem;
       padding: 18px 10px 24px;
-      color: #777777;
+      color: #777;
     }
 
     @media (max-width: 768px) {
-      .hero-inner {
-        grid-template-columns: 1fr;
-      }
-      .nav-links {
-        display: none; /* keep it simple on mobile */
-      }
+      .hero-inner { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
     }
+
   </style>
 </head>
 <body>
@@ -286,7 +169,6 @@
 <header>
   <div class="nav-inner">
     <div class="logo-wrap">
-      <!-- Make sure this filename matches your uploaded logo -->
       <img src="logo.png" alt="Richmond Advisory Group logo" />
       <div class="wordmark">RICHMOND ADVISORY GROUP</div>
     </div>
@@ -302,26 +184,26 @@
   <div class="hero-inner">
     <div>
       <div class="eyebrow">Independent Defence Consultancy</div>
-      <h1>Discreet advisory support, grounded in modern operations.</h1>
+
+      <h1>Grounded insight. Practical assessment. Clear guidance.</h1>
       <div class="accent-bar"></div>
+
       <p>
-        Richmond Advisory Group is a small, independent UK-based defence consultancy.
-        We provide discreet analysis and advisory services to selected clients in the
-        defence and related sectors, informed by recent operational experience and an
-        understanding of contemporary large-scale conflict.
+        Richmond Advisory Group is an independent consultancy working with organisations involved in defence and related sectors.
+        We provide grounded insight, practical assessments and clear guidance to support planning, training and capability development.
       </p>
+
       <div class="hero-cta">
         <a href="#contact" class="btn-primary">Contact Richmond Advisory Group</a>
-        <span class="hero-note">UK-based · Available for government, industry and trusted partners</span>
+        <span class="hero-note">UK-based · Government, industry and trusted partners</span>
       </div>
     </div>
 
     <aside class="hero-card">
       <div class="hero-card-title">Approach</div>
       <p>
-        We keep detail off the page and in the room. Engagements are low-profile,
-        focused on practical implications rather than marketing language, and tailored
-        to the specific questions our clients need to answer.
+        We keep detail focused on the work, not the website.
+        Engagements are straightforward, analytical and shaped around the specific questions clients need to answer.
       </p>
     </aside>
   </div>
@@ -332,9 +214,8 @@
   <section id="about">
     <h2>About</h2>
     <p class="small">
-      Richmond Advisory Group works at the intersection of modern conventional conflict and
-      institutional decision-making. We support organisations that need realistic context on
-      how contemporary operations are actually conducted and how this may evolve.
+      We help clients understand how contemporary challenges, operational realities and organisational constraints interact.
+      Our aim is to provide clear context to support planning and decision-making.
     </p>
   </section>
 
@@ -345,27 +226,23 @@
       <div class="what-card">
         <h3>Advisory</h3>
         <p>
-          Discreet, scenario-driven advisory work for defence and related organisations,
-          helping to frame problems, stress-test assumptions and understand operational
-          realities in plain language.
+          Advisory work to help clients clarify problems, examine assumptions and understand the practical implications of decisions.
         </p>
       </div>
 
       <div class="what-card">
         <h3>Briefings & Training</h3>
         <p>
-          Focused briefings and discussions on selected aspects of modern conflict, tailored
-          to staff, training establishments and decision-makers who require current, grounded
-          insight rather than theory.
+          Focused briefings and discussions on selected aspects of modern conflict,
+          designed for staff, instructors and decision-makers who require grounded understanding.
         </p>
       </div>
 
       <div class="what-card">
         <h3>Research & Insight</h3>
         <p>
-          Support to internal studies, concept work and exploratory projects where recent
-          operational experience and practical constraints need to be folded into existing
-          analysis or planning.
+          Support to studies, concept work and exploratory projects,
+          ensuring ideas and plans are informed by realistic context and practical experience.
         </p>
       </div>
 
@@ -374,25 +251,20 @@
 
   <section id="contact">
     <h2>Contact</h2>
-    <div class="contact-block">
-      <div class="contact-label">Email</div>
-      <p>
-        <a href="mailto:info@richmondadvisorygroup.co.uk">
-          info@richmondadvisorygroup.co.uk
-        </a>
-      </p>
+    <div class="contact-label">Email</div>
+    <p>
+      <a href="mailto:info@richmondadvisorygroup.co.uk">info@richmondadvisorygroup.co.uk</a>
+    </p>
 
-      <div class="footnote">
-        Initial contact by email only. Further information on services and background is provided
-        directly to prospective clients as required.
-      </div>
+    <div class="footnote">
+      Initial contact is by email. Further information is provided directly to prospective clients.
     </div>
   </section>
 
 </main>
 
 <footer>
-  &copy; <!-- you can update this year if you want --> Richmond Advisory Group. All rights reserved.
+  © Richmond Advisory Group. All rights reserved.
 </footer>
 
 </body>
